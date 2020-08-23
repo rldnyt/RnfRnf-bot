@@ -3,6 +3,7 @@ from typing import List, Any, Dict
 
 import discord
 from discord.ext import commands
+import os
 
 app = commands.Bot(command_prefix='!c')
 
@@ -423,4 +424,5 @@ async def on_message(message):
         )
         await message.channel.send(embed=embed)
 
-app.run('NzIzMTA4MjI2Nzk4ODQ2MDAz.Xus27w.yF12PbsogRtNefUY4JTmadcqwac')
+access_token = os.environ["BOT_TOKENT"]
+app.run(access_token)
